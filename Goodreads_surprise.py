@@ -74,10 +74,11 @@ def plot_learning_curve(iter_array, train_accuracy, test_accuracy, xlabel = 'ite
 
 plot_learning_curve(epochs, train_mse, test_mse)
 
+
 #train on a full dataset and make prediction
 full_trainset = data.build_full_trainset()
 algo = SVD(n_factors = 40, lr_all = 0.001, verbose=True, n_epochs = 100)
-algo.fit(full_trainset)
+algo.fit(full_trainset)// coping the Code
 
 # make prediction:
 all_book_id = full_rating.book_id.unique()
